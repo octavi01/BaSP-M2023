@@ -55,6 +55,24 @@
                 our members
             </p>
         </section>
+        <section id="form">
+            <form action="nose.php" method="post">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Surname">
+                <input type="text" placeholder="E-mail adress">
+                <select name="selectAMotive">
+                    <option value="" disabled selected>Select a motive</option>
+                    <option value="memberAndCosts">I want to know about membership and costs</option>
+                    <option value="suggestion/enguiry">I want to know sumbit a suggestion/enguiry</option>
+                    <option value="complain">I want to sumbit a complain</option>
+                    <!-- acá me ayude con Chatgtp, lo voy a charlar el lunes con los tutores -->
+                </select>
+                <textarea name="message" placeholder="Your message..."></textarea>
+                <button>Clear</button>
+                <button>Send</button>
+
+            </form>
+        </section>
 
     </main>
     <section>
