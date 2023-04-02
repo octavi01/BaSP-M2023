@@ -106,3 +106,24 @@ header img {
     text-align: justify;
     color: #FFFFFF;
 }
+.footer {
+    width: 1512px;
+    height: 133px;
+    background-color: #AACE9B;
+}
+.footer p {
+    position: relative;
+    top: 50px;
+    left: 20px;
+    width: 765px;
+    height: 38px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+}
+.footer img {
+    position: relative;
+    left: 1200px;
+    bottom: 38px;
+    width: 71px;
+    height: 71px;
+}
