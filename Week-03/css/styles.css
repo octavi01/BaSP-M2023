@@ -45,12 +45,43 @@ header img {
     padding: 10px;
 }
 .info-section {
+    display: inline-block;
     width: 1512px;
     height: 691px;
     background-color: #AACE9B;
 }
 .info-section img {
     display: inline-block;
-    width: 109,93px;
+    width: 109.93px;
     height: 110px;
+}
+.info-section p {
+    display: inline-block;
+    width: 442px;
+    height: 175px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.info-section h3 {
+    display: inline-block;
+    width: 342px;
+    height: 67px;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #0a4c2d;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.info-section div {
+    display: inline-block;
+    width: 720px;
+    height: 285px;
+}
+.form-section {
+    width: 1512px;
+    height: 515px;
+    background-color: #35365C;
 }
