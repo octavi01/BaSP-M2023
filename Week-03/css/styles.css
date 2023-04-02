@@ -1,3 +1,8 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
 header {
     width: 1512px;
     height: 159px;
@@ -105,6 +110,25 @@ header img {
     font-size: 50px;
     text-align: justify;
     color: #FFFFFF;
+}
+.activities-section {
+    width: 1512px;
+    height: 360px;
+    background-color: #D9D9D9
+}
+.activities-section ol {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+.activities-section ul {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+.activities-section div {
+    float: left;
+    width: 378px;
 }
 .footer {
     width: 1512px;
