@@ -85,3 +85,24 @@ header img {
     height: 515px;
     background-color: #35365C;
 }
+.history-section {
+    width: 1512px;
+    height: 364px;
+    background-color: #AACE9B;
+}
+.history-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.history-section p {
+    position: relative;
+    bottom: 50px;
+    width: 1369px;
+    height: 236px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-align: justify;
+    color: #FFFFFF;
+}
