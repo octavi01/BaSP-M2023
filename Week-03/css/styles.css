@@ -1,3 +1,16 @@
+header {
+    width: 1512px;
+    height: 159px;
+    background-color: #373867;
+}
+header img {
+    float: right;
+    overflow: hidden;
+    width: 206px;
+    height: 42px;
+    padding-top: 55px;
+    padding-right: 60px;
+}
 .home-section { 
     width: 1512px;
     height: 471px;
@@ -30,4 +43,14 @@
     width: 1034px;
     height: 378px;
     padding: 10px;
+}
+.info-section {
+    width: 1512px;
+    height: 691px;
+    background-color: #AACE9B;
+}
+.info-section img {
+    display: inline-block;
+    width: 109,93px;
+    height: 110px;
 }
