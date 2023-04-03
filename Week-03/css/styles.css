@@ -90,6 +90,31 @@ header img {
     height: 515px;
     background-color: #35365C;
 }
+.form-section h2 {
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: #FFFFFF;
+}
+.form-section input[type="text"], select {
+    display: block;
+    position: relative;
+    top: 25px;
+    left: 80px;
+    padding: 5px;
+    margin: 20px;
+    width: 392px;
+    height: 37px;
+    color: grey;
+}
+.form-section textarea {
+    position: relative;
+    left: 600px;
+    bottom: 200px;
+    width: 745px;
+    height: 174px;
+}
 .history-section {
     width: 1512px;
     height: 364px;
