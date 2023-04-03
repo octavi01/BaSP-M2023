@@ -16,6 +16,79 @@ header img {
     padding-top: 55px;
     padding-right: 60px;
 }
+.menu-section {
+    width: 427px;
+    height: 1068px;
+    background-color: #FFFFFF;
+}
+.menu-section h2 {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    color: #333;
+}
+.menu-section > .first-list li{
+    position: relative;
+    top: 30px;
+    left: 10px;
+    width: 370px;
+    height: 67px;
+    margin: 20px;
+    padding: 10px;
+    border: solid #333 1px;
+    list-style: none;
+    background-color: #51A884;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+}
+.menu-section a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.menu-section > .contact-section {
+    width: 370px;
+    height: 409px;
+    padding: 20px;
+    margin: 30px;
+    margin-top: 60px;
+    background-color: #51A884;
+}
+.menu-section > .contact-section h3 {
+    display: inline block;
+    width: auto;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.menu-section > .contact-section img {
+    display: block;
+    position: relative;
+    right: 12px;
+    bottom: 24px;
+    width: 70px;
+    height: 70px;
+    margin-top: 35px;
+}
+.menu-section > .contact-section li {
+    display: inline-block;
+    position: relative;
+    bottom: 305px;
+    left: 50px;
+    width: 295px;
+    height: 100px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
 .home-section { 
     width: 1512px;
     height: 471px;
@@ -72,6 +145,9 @@ header img {
 }
 .info-section p {
     display: inline-block;
+    position: relative;
+    bottom: 25px;
+    left: 125px;
     width: 442px;
     height: 175px;
     font-family: 'Roboto', sans-serif;
@@ -80,6 +156,9 @@ header img {
 }
 .info-section h3 {
     display: inline-block;
+    position: relative;
+    bottom: 40px;
+    left: 10px;
     width: 342px;
     height: 67px;
     padding-top: 20px;
@@ -92,6 +171,9 @@ header img {
 }
 .info-section div {
     display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 80px;
     width: 720px;
     height: 285px;
 }
