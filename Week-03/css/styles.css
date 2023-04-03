@@ -23,16 +23,26 @@ header img {
     background-color: #D9D9D9;
 }
 .home-section h2 {
+    position: relative;
+    bottom: 0px;
+    left: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 42px;
     text-transform: uppercase;
 }
 .home-section h3 {
+    position: relative;
+    bottom: 0px;
+    left: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     text-transform: capitalize;
 }
 .home-section p {
+    position: relative;
+    bottom: 0px;
+    left: 5px;
+    margin-top: 30px;
     font-family: 'Roboto', sans-serif;
     font-size: 23px;
 }
@@ -115,12 +125,30 @@ header img {
     width: 745px;
     height: 174px;
 }
+.form-buttom {
+    display: inline-block;
+    position: relative;
+    bottom: 110px;
+    left: 20px;
+    margin-right: 200px;
+    width: 160px;
+    height: 70px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #49A37B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    color: #333;
+}
 .history-section {
     width: 1512px;
     height: 364px;
     background-color: #AACE9B;
 }
 .history-section h2 {
+    position: relative;
+    top: 10px;
+    left: 25px;
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
     text-transform: uppercase;
@@ -128,7 +156,8 @@ header img {
 }
 .history-section p {
     position: relative;
-    bottom: 50px;
+    top: 10px;
+    left: 50px;
     width: 1369px;
     height: 236px;
     font-family: 'Roboto', sans-serif;
@@ -171,8 +200,9 @@ header img {
 }
 .footer img {
     position: relative;
-    left: 1200px;
-    bottom: 38px;
+    left: 1120px;
+    bottom: 0px;
+    margin-right: 45px;
     width: 71px;
     height: 71px;
 }
