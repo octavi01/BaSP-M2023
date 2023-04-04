@@ -19,9 +19,9 @@ header img {
     position: relative;
     top: 0px;
     left: 40px;
-    margin-top: -18px;
     width: 55px;
     height: 50px;
+    margin-top: -18px;
 }
 .menu-section {
     width: 427px;
@@ -205,10 +205,10 @@ header img {
     position: relative;
     top: 25px;
     left: 80px;
-    padding: 5px;
-    margin: 20px;
     width: 392px;
     height: 37px;
+    padding: 5px;
+    margin: 20px;
     color: grey;
 }
 .form-section textarea {
@@ -223,9 +223,9 @@ header img {
     position: relative;
     bottom: 110px;
     left: 20px;
-    margin-right: 200px;
     width: 160px;
     height: 70px;
+    margin-right: 200px;
     text-align: center;
     border-radius: 15px;
     background-color: #49A37B;
@@ -246,9 +246,9 @@ header img {
     position: relative;
     top: 10px;
     left: 25px;
+    text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
-    text-transform: uppercase;
     color: #FFFFFF;
 }
 .history-section p {
@@ -257,9 +257,9 @@ header img {
     left: 50px;
     width: 1369px;
     height: 236px;
+    text-align: justify;
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
-    text-align: justify;
     color: #FFFFFF;
 }
 .activities-section {
@@ -275,9 +275,9 @@ header img {
     width: auto;
     height: auto;
     padding: 3px;
-    text-align: center;
     border: 4px solid #373867;
     border-radius: 5px;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     color: #373867;
