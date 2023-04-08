@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+.header-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #35365C;
+}
+.header-son { 
+    padding-right: 3%;
+    padding-left: 5%;
+    
+}
+@media(max-width: 768px) {
+    .menu-section {
+        display: none;
+    }
+}
