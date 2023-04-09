@@ -55,8 +55,35 @@
     width: 248px;
     height: 267px;
 }
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #AACE9B;
+}
+.info-item {
+    margin: 10px;
+}
+.info-section img {
+    width: 110px;
+    height: 110px;
+}
+.info-section h3 {
+    padding: 20px 50px;
+    text-align: center;
+    background-color: #88a47c;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #FFFFFF;
+    
+}
 @media(max-width: 768px) {
     .menu-section {
+        display: none;
+    }
+    .info-section p {
         display: none;
     }
 }
