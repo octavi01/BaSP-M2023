@@ -120,23 +120,49 @@
                     </div>   
                 </div> 
             </section>
-            <section id="form" class="form-section">
-                <h2>You have questions, ask away and get your answers</h2>
-                <form action="nose.php" method="post">
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Surname">
-                    <input type="text" placeholder="E-mail adress">
-                    <select name="selectAMotive">
-                        <option value="" disabled selected>Select a motive</option>
-                        <option value="memberAndCosts">I want to know about membership and costs</option>
-                        <option value="suggestion/enguiry">I want to know sumbit a suggestion/enguiry</option>
-                        <option value="complain">I want to sumbit a complain</option>
-                        <!-- acá me ayude con Chatgtp, lo voy a charlar el lunes con los tutores -->
-                    </select>
-                    <textarea name="message" placeholder="Your message..."></textarea>
-                    <button class="form-buttom"><img src="../assets/images/clearButtonIcon.png" alt="x">Clear</button>
-                    <button class="form-buttom"><img src="../assets/images/sendbuttonicon.png" alt="letter">Send</button>
-                </form>
+            <section id="form">
+                <div class="form-section">
+                    <div class="form-item">
+                        <h2>You have questions, ask away and get your answers</h2>
+                    </div>
+                    <div class="form-item">
+                        <form action="nose.php" method="post">
+                            <div class="form-item"><input type="text" placeholder="Name"></div>
+                            <div class="form-item"><input type="text" placeholder="Surname"></div>
+                            <div class="form-item"><input type="text" placeholder="E-mail adress"></div>
+                            <div class="form-item">
+                                <select name="selectAMotive">
+                                    <div class="form-item">
+                                        <option value="" disabled selected>Select a motive</option>
+                                    </div>
+                                    <div class="form-item">
+                                        <option value="memberAndCosts">I want to know about membership and costs</option>
+                                    </div>
+                                    <div class="form-item">
+                                        <option value="suggestion/enguiry">I want to know sumbit a suggestion/enguiry</option>
+                                    </div>
+                                    <div class="form-item">
+                                        <option value="complain">I want to sumbit a complain</option>
+                                    </div>
+                                    <!-- acá me ayude con Chatgtp, lo voy a charlar el lunes con los tutores -->
+                                </select>
+                            </div>    
+                            <div class="form-item">
+                                <textarea name="message" placeholder="Your message..."></textarea>
+                            </div>
+                            <div class="form-item">
+                                <button class="form-buttom">
+                                    <img src="../assets/images/clearButtonIcon.png" alt="x">Clear
+                                </button>
+                            </div>
+                            <div class="form-item">
+                                <button class="form-buttom">
+                                    <img src="../assets/images/sendbuttonicon.png" alt="letter">Send
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </section>
             <section id="ourHistory" class="history-section">
                 <h2>our history</h2>

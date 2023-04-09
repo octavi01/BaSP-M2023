@@ -79,6 +79,62 @@
     color: #FFFFFF;
     
 }
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #35365C;
+    color: lightblue;
+}
+.form-item {
+    margin: 10px;
+    text-align: center;
+}
+.form-section h2 {
+    padding: 10px 50px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+.form-section form {
+    width: 100%;
+}
+.form-section input[type="text"], select {
+    width: 100%;
+    height: 34px;
+    margin-bottom: 10px;
+    border: 1px black;
+    border-radius: 5px;
+    color: lightblue;
+}
+.form-section textarea {
+    width: 100%;
+    height: 123px;
+    border: 1px black;
+    border-radius: 5px;
+    color: lightblue;
+}
+.form-section button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 90px;
+    height: 38px;
+    padding: 10px;
+    background-color: #49A37B;
+    border-radius: 15px;
+    font-size: 18px;
+    color: black;
+}
+.form-section button img {
+    width: 20px;
+    height: 17px;
+}
 @media(max-width: 768px) {
     .menu-section {
         display: none;
