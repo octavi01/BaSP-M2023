@@ -61,11 +61,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
     background-color: #AACE9B;
 }
 .info-item {
     margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 .info-section img {
     width: 110px;
@@ -103,6 +106,7 @@
 }
 .form-section form {
     width: 100%;
+    padding-left: 8%;
 }
 .form-section input[type="text"], select {
     width: 100%;
@@ -286,6 +290,63 @@
     }
     .right-home {
         width: 25%;
+    }
+    .info-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .info-item {
+        width: 45%;
+    }
+    .info-item1 {
+
+    }
+    .info-section img {
+        width: 90px;
+        height: 85px;
+    }
+    .info-section h3 {
+        font-size: 20px;
+    }
+    .info-section p {
+        text-align: start;
+        font-size: 23px;
+    }
+    .history-section p {
+        padding: 0 1% 4% 1%;
+        font-size: 23px;
+
+    }
+    .activities-item {
+        padding: 20px 185px;
+    }
+    .activities-section h2 {
+        font-size: 42px;
+        text-align: center;
+    }
+    .activities-section ol li {
+        font-weight: 600;
+        font-size: 24px;
+    }
+    .activities-section img {
+        display: none;
+    }
+    .activities-item h3 {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        font-size: 23px;
+    }
+    .activities-item ul li {
+        text-align: start;
+        font-size: 15px;
+    }
+    .footer-section {
+        
     }
 }
     
