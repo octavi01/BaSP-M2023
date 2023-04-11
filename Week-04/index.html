@@ -26,25 +26,35 @@
             </div>
         </header>
         <nav>
-            <section id="menu" class="menu-section">
-                <h2>Menú</h2>
-                <ul class="first-list">
-                    <li><a href="">home</a></li>
-                    <li><a href="">sign up</a></li>
-                    <li><a href="">log in</a></li>
-                    <li><a href="">info</a></li>
-                </ul>
-                <div class="contact-section">
-                    <h3>contact us</h3>
-                    <img src="../assets/images/email.png" alt="email">
-                    <img src="../assets/images/phone.png" alt="phone">
-                    <img src="../assets/images/address.png" alt="address">
-                    <ul class="second-list">
-                        <li>information@untitled.tld</li>
-                        <li>(000)000-0000</li>
-                        <li>1234 Somewhere road #8254Nashville, TN 00000-0000</li>
+            <section id="menu" >
+            <div class="menu-section">    
+                <div class="menu-item">
+                    <h2>Menú</h2>
+                </div>
+                <div class="menu-item">
+                    <ul class="first-list">
+                        <li><a href="">home</a></li>
+                        <li><a href="">sign up</a></li>
+                        <li><a href="">log in</a></li>
+                        <li><a href="">info</a></li>
                     </ul>
                 </div>
+                <div class="contact-section">
+                    <div class="contact-item">
+                        <h3>contact us</h3>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../assets/images/email.png" alt="email">
+                        <img src="../assets/images/phone.png" alt="phone">
+                        <img src="../assets/images/address.png" alt="address">
+                        <ul class="second-list">
+                            <li>information@untitled.tld</li>
+                            <li>(000)000-0000</li>
+                            <li>1234 Somewhere road #8254Nashville, TN 00000-0000</li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
             </section>   
         </nav>
         <main>
@@ -115,33 +125,30 @@
                     </div>
                     <div class="form-item">
                         <form action="nose.php" method="post">
-                            <div class="form-item"><input type="text" placeholder="Name"></div>
-                            <div class="form-item"><input type="text" placeholder="Surname"></div>
-                            <div class="form-item"><input type="text" placeholder="E-mail adress"></div>
-                            <div class="form-item">
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Surname">
+                            <input type="text" placeholder="E-mail adress">
                                 <select name="selectAMotive">
-                                    <div class="form-item">
                                         <option value="" disabled selected>Select a motive</option>
                                         <option value="memberAndCosts">I want to know about membership and costs</option>
                                         <option value="suggestion/enguiry">I want to know sumbit a suggestion/enguiry</option>
                                         <option value="complain">I want to sumbit a complain</option>
-                                    </div>
                                     <!-- acá me ayude con Chatgtp, lo voy a charlar el lunes con los tutores -->
-                                </select>
-                            </div>    
-                            <div class="form-item">
+                                </select> 
+                    </div>
+                            <div class="form-item1">
                                 <textarea name="message" placeholder="Your message..."></textarea>
-                            </div>
-                            <div class="button-class">
-                                <div class="button-item">
-                                    <button>
-                                        <img src="../assets/images/clearButtonIcon.png" alt="x">Clear
-                                    </button>
-                                </div>
-                                <div class="button-item">
-                                    <button>
-                                        <img src="../assets/images/sendbuttonicon.png" alt="letter">Send
-                                    </button>
+                                <div class="button-class">
+                                    <div class="button-item">
+                                        <button>
+                                            <img src="../assets/images/clearButtonIcon.png" alt="x">Clear
+                                        </button>
+                                    </div>
+                                    <div class="button-item">
+                                        <button>
+                                            <img src="../assets/images/sendbuttonicon.png" alt="letter">Send
+                                        </button>
+                                    </div>        
                                 </div>
                             </div>  
                         </form>
