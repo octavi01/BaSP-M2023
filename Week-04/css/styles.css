@@ -110,7 +110,7 @@
     padding-left: 8%;
 }
 .form-section input[type="text"], select {
-    width: 100%;
+    width: 90%;
     height: 34px;
     margin-bottom: 10px;
     border: 1px black;
@@ -153,7 +153,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10%;
 }
 .form-item1 {
     width: 90%;
@@ -262,7 +261,7 @@
         flex-direction: row;
         justify-content:space-between;
         align-items: center;
-        padding: 2%;
+        padding: 1%;
     }
     .home-section img {
         width: 184px;
@@ -350,10 +349,16 @@
     }
 }
 @media only screen and (min-width: 1024px) {
+    main, footer {
+        margin-left: 427px;
+    }
     #menu-boton{
         display: none;
     }
     .menu-section {
+        position: fixed;
+        top: 0;
+        float: left;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -421,26 +426,30 @@
         justify-content: end;
 
     }
+    .home-item {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
     .home-section h2 {
-        width: 450px;
+        width: 319px;
         text-align: start;
-        font-size: 42px;
+        font-size: 30px;
     }
     .home-section h3 {
-        width: 650px;
+        width: 386px;
         text-align: start;
-        font-size: 32px;
+        font-size: 20px;
     }
     .home-section p {
-        width: 710px;
+        width: 375px;
         text-align: start;
-        font-size: 28px;
+        font-size: 19px;
         padding: 0;
     }
     .home-section img {
-        width: 267px;
-        height: 236px;
-        margin-left: 50px
+        width: 175px;
+        height: auto;
     }
     .form-section {
         display: flex;
@@ -452,10 +461,9 @@
     }
     .form-section h2 {
         height: 140px;
-        width: 960px;
+        width: 600px;
         padding-top: 10px;
-        padding-left: 110px;
-        font-size: 40px;
+        font-size: 28px;
     }
     .form-section input[type="text"], select {
         margin-bottom: 30px;
