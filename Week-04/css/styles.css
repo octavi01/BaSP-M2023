@@ -306,9 +306,6 @@
     .info-item {
         width: 45%;
     }
-    .info-item1 {
-
-    }
     .info-section img {
         width: 90px;
         height: 85px;
@@ -352,8 +349,33 @@
     }
 }
 @media only screen and (min-width: 1024px) {
-    .home-section {
+    #menu-boton{
+        display: none;
+    }
+    .header-div {
+        justify-content: end;
 
+    }
+    .home-section h2 {
+        width: 450px;
+        text-align: start;
+        font-size: 42px;
+    }
+    .home-section h3 {
+        width: 650px;
+        text-align: start;
+        font-size: 32px;
+    }
+    .home-section p {
+        width: 710px;
+        text-align: start;
+        font-size: 28px;
+        padding: 0;
+    }
+    .home-section img {
+        width: 267px;
+        height: 236px;
+        margin-left: 50px
     }
     .form-section {
         display: flex;
@@ -388,6 +410,19 @@
     }
     .button-item {
         margin-bottom: 20px;
+    }
+    .history-section {
+        align-items: start;
+    }
+    .history-section h2 {
+        font-size: 50px;
+        padding-left: 30px;
+        text-transform: uppercase;
+    }
+    .history-section p {
+        font-size: 40px;
+        padding: 15px 80px 80px 30px;
+        margin-left: 30px;
     }
 
 }
