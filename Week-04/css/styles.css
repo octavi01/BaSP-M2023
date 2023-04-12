@@ -76,7 +76,7 @@
     height: 110px;
 }
 .info-section h3 {
-    padding: 20px 50px;
+    padding: 10px 16px;
     text-align: center;
     background-color: #88a47c;
     border-radius: 10px;
@@ -98,7 +98,6 @@
     width: 90%;
 }
 .form-section h2 {
-    padding: 10px 45px;
     font-size: 24px;
     text-align: center;
     text-transform: uppercase;
@@ -279,6 +278,8 @@
         font-size: 21px;
     }
     .home-section p {
+        width: auto;
+        height: auto;
         text-align: start;
         font-size: 15px;
         padding-bottom: 20px;
@@ -306,16 +307,22 @@
     .info-item {
         width: 45%;
     }
+    .info-subitem {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
     .info-section img {
-        width: 90px;
-        height: 85px;
+        width: 70px;
+        height: 70px;
     }
     .info-section h3 {
         font-size: 20px;
     }
     .info-section p {
         text-align: start;
-        font-size: 23px;
+        font-size: 18px;
     }
     .history-section p {
         padding: 0 1% 4% 1%;
@@ -428,8 +435,9 @@
     }
     .home-item {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        width: 90%;
     }
     .home-section h2 {
         width: 319px;
@@ -442,7 +450,7 @@
         font-size: 20px;
     }
     .home-section p {
-        width: 375px;
+        width: auto;
         text-align: start;
         font-size: 19px;
         padding: 0;
@@ -455,15 +463,15 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: center;
         align-items: start;
         padding-bottom: 70px;
     }
     .form-section h2 {
-        height: 140px;
-        width: 600px;
+        height: auto;
+        width: auto;
         padding-top: 10px;
-        font-size: 28px;
+        font-size: 22px;
     }
     .form-section input[type="text"], select {
         margin-bottom: 30px;
