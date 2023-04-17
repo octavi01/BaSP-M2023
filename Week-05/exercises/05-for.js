@@ -38,5 +38,5 @@ console.log("--Exercise 5: For");
    for(var i=0; i < 10; i++) {
     emptyArray.push(i)
    }
-   console.log(emptyArray)
+   console.log(emptyArray);
 
