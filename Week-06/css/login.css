@@ -2,6 +2,9 @@ main {
     background-color: #E3E6F2;
     color: black;
 }
+a {
+    text-align: center;
+}
 .sign-in {
     display: flex;
     flex-direction: column;
@@ -22,8 +25,6 @@ main {
     width: 70%;
     margin-bottom: 10px;
     margin-left: 20%;
-    border: none;
-    border-bottom: #AACE9B 3px solid;
     color: black;
 }
 .sign-in-item input[type="password"] {
@@ -31,8 +32,6 @@ main {
     margin-bottom: 10px;
     margin-left: 10px;
     margin-left: 20%;
-    border: none;
-    border-bottom: #AACE9B 3px solid;
     color: black;
 }
 .sign-in-item label {
@@ -73,3 +72,31 @@ main {
     padding-left: 20%;
     color: black;
 }
+.email-class {
+    border: none;
+    border-bottom: #AACE9B 3px solid;
+}
+.password-class {
+    border: none;
+    border-bottom: #AACE9B 3px solid;
+}
+.red-border {
+    border: red 5px solid;
+}
+.green-border {
+    border: #2C8008 5px solid;
+}
+.error {
+    display: block;
+    text-align: center;
+    color: red;
+  }
+  
+  .correct {
+    display: none;
+  }
+div {
+    text-align: center;
+    color: red;
+}
+  

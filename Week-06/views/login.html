@@ -11,10 +11,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>"
-        <link rel="stylesheet" type="text/css" href="../css/header.css"/>"
-        <link rel="stylesheet" type="text/css" href="../css/login.css"/>"
-        <link rel="stylesheet" type="text/css" href="../css/footer.css"/>"
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/login.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/footer.css"/>
     </head>
     <body>
         <header>
@@ -34,8 +34,9 @@
                 </div>
                 <div class="sign-in-item">
                     <form action="nose.php" method="post">
-                        <input type="text" placeholder="email">
-                        <input type="password" placeholder="password">
+                        <input type="text" id="email-input" class="email-class" placeholder="email">
+                        <input type="password" id="password-input" class="password-class" placeholder="password">
+                        <span class='correct' id="fpassword-error-msg">invalid password</span>
                         <a href="">Have you forgotten the password?</a>
                         <label>
                             <div class="remember-me-container">
@@ -44,8 +45,8 @@
                         </label>
                     </form>
                         <h3>Don't have an account?</h3>
-                        <a href="">Click here to become a member</a>
-                        <button id="continue-button">Continue</button>
+                        <a href="sign-up.html">Click here to become a member</a>
+                        <button id="login-button">Login</button>
                 </div>    
             </div>
         </main>
@@ -64,4 +65,5 @@
             </div>
         </footer>  
     </body>
+    <script src="../js/login.js"></script>
 </html>
