@@ -18,6 +18,9 @@
     padding-right: 3%;
     padding-left: 5%;  
 }
+.button-sign {
+    border-bottom: 2px solid #51A884;
+}
 @media(max-width: 599px) {
     .menu-section {
         display: none;
@@ -98,6 +101,9 @@
         margin-bottom: 60px;
     }
     .header-div {
-        justify-content: end;
+        justify-content: space-between;
+    }
+    #little-button {
+        display: none;
     }
 }
