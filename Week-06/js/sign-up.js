@@ -12,6 +12,17 @@ var inputPhone = document.getElementById("input-phone");
 var phoneError = document.createElement("div");
 var inputAddress = document.getElementById("input-address");
 var addressError = document.createElement("div");
+var inputLocation = document.getElementById("input-location");
+var locationError = document.createElement("div");
+var inputPostcode = document.getElementById("input-postcode");
+var postcodeError = document.createElement("div");
+var inputEmail = document.getElementById("input-email");
+var emailError = document.createElement("div");
+var inputPassword = document.getElementById("input-password");
+var passwordError = document.createElement("div");
+var inputRepeatPassword = document.getElementById("input-repeat-password");
+var repeatPasswordError = document.createElement("div");
+var repeatPassword = inputRepeatPassword.value;
 
 // validate name
 
@@ -158,6 +169,143 @@ function validateAddress(address) {
     inputAddress.classList.remove("red-border");
     addressError.textContent = "";
   }
+
+  // validate Location
+
+  inputLocation.addEventListener("blur", function() {
+    validateLocation(inputLocation.value);
+})
+function validateLocation(location) {
+    var locationRegex = /\b\w{3,}\b/;
+    if (locationRegex.test(location)) {
+      locationError.textContent = "";
+      return true;
+    } else {
+      inputLocation.classList.remove("input-class");
+      locationError.textContent = "Invalid Location. Must contain at least 3 alphanumeric characters";
+      inputLocation.classList.add("red-border");
+      inputLocation.parentNode.insertBefore(locationError, inputLocation.nextSibling);  
+      return false;
+    }
+  }
+  inputLocation.onfocus = function () {
+    inputLocation.classList.remove("red-border");
+    locationError.textContent = "";
+  }
+
+  // validate Postcode
+
+  inputPostcode.addEventListener("blur", function() {
+    validatePostcode(inputPostcode.value);
+})
+function validatePostcode(postcode) {
+    var postcodeRegex = /^\d{4,5}$/;
+    if (postcodeRegex.test(postcode)) {
+      postcodeError.textContent = "";
+      return true;
+    } else {
+      inputPostcode.classList.remove("input-class");
+      postcodeError.textContent = "Invalid Postcode. Must contain between 4-5 numbers";
+      inputPostcode.classList.add("red-border");
+      inputPostcode.parentNode.insertBefore(postcodeError, inputPostcode.nextSibling);  
+      return false;
+    }
+  }
+  inputPostcode.onfocus = function () {
+    inputPostcode.classList.remove("red-border");
+    postcodeError.textContent = "";
+  }
+
+  // validate E-Mail
+
+  inputEmail.addEventListener("blur", function() {
+    validateEmail(inputEmail.value);
+})
+function validateEmail(email) {
+    var emailRegex = /^[^@]+@[^@]+.[a-zA-Z]{2,}$/;
+    if (emailRegex.test(email)) {
+      emailError.textContent = "";
+      return true;
+    } else {
+      inputEmail.classList.remove("input-class");
+      emailError.textContent = "Invalid E-Mail. Must contain a valid format. Example@gmail.com";
+      inputEmail.classList.add("red-border");
+      inputEmail.parentNode.insertBefore(emailError, inputEmail.nextSibling);  
+      return false;
+    }
+  }
+  inputEmail.onfocus = function () {
+    inputEmail.classList.remove("red-border");
+    emailError.textContent = "";
+  }
+
+  // validate Password
+
+  inputPassword.onblur = function () {
+    var password = inputPassword.value;
+    var hasBigLetter = false;
+    var hasSmallLetter = false;
+    var hasNumber = false;
+    for (var i = 0; i < password.length; i++) {
+      var char = password.charAt(i);
+      if (char >= "0" && char <= "9") {
+        hasNumber = true;
+      } else if (char === char.toUpperCase()) {
+        hasBigLetter = true;
+      } else if (char === char.toLowerCase()) {
+        hasSmallLetter = true;
+      }
+    }
+  
+    if (!hasBigLetter || !hasSmallLetter || !hasNumber) {
+        inputPassword.classList.remove("input-class");
+        passwordError.textContent = 
+        "Invalid Password. You need at least 5 letters (one uppercase, one lowercase, and one number)";
+        inputPassword.classList.add("red-border");
+        inputPassword.parentNode.insertBefore(passwordError, inputPassword.nextSibling);  
+        return false;
+    }
+    if (password.length < 5) {
+        inputPassword.classList.remove("input-class");
+        passwordError.textContent = 
+        "Invalid Password. You need at least 5 letters (one uppercase, one lowercase, and one number)";
+        inputPassword.classList.add("red-border");
+        inputPassword.parentNode.insertBefore(passwordError, inputPassword.nextSibling);  
+        return false;
+    } 
+    if (hasBigLetter && hasSmallLetter && hasNumber && password.length >=5 ) {
+        passwordError.textContent = "";
+        return true;
+    }
+  };
+  
+  inputPassword.onfocus = function () {
+    inputPassword.classList.remove("red-border");
+    passwordError.textContent = "";
+  };
+  
+  // validate Repeat Password
+
+  inputRepeatPassword.onblur = function () {
+    var repeatPassword = inputRepeatPassword.value;
+    var password = inputPassword.value;
+    if (repeatPassword !== password) {
+      inputRepeatPassword.classList.remove("input-class");
+      repeatPasswordError.textContent = "Passwords do not match";
+      inputRepeatPassword.classList.add("red-border");
+      inputRepeatPassword.parentNode.insertBefore(repeatPasswordError, inputRepeatPassword.nextSibling);
+      return false;
+    }
+    repeatPasswordError.textContent = "";
+    return true;
+  };
+  
+  inputRepeatPassword.onfocus = function () {
+    inputRepeatPassword.classList.remove("red-border");
+    repeatPasswordError.textContent = "";
+  };
+
+
 
 
 

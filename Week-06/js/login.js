@@ -49,13 +49,13 @@ inputPassword.onblur = function () {
       passwordErrorMsg.classList.remove("correct");
       passwordErrorMsg.classList.add("error");
       passwordErrorMsg.textContent =
-        "este campo necesita al menos una mayuscula, una minuscula y un numero";
+        "Invalid Password. You need at least one uppercase, one lowercase, and one number.";
     }
   
     if (password.length < 5) {
       passwordErrorMsg.classList.remove("correct");
       passwordErrorMsg.classList.add("error");
-      passwordErrorMsg.textContent = "este campo necesita al menos 5 letras";
+      passwordErrorMsg.textContent = "Invalid Password. You need at least five letters";
     } 
     if (hasBigLetter && hasSmallLetter && hasNumber && password.length >=5 ) {
         passwordErrorMsg.textContent = "";
