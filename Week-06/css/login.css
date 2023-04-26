@@ -91,7 +91,6 @@ a {
     text-align: center;
     color: red;
   }
-  
   .correct {
     display: none;
   }
@@ -99,4 +98,11 @@ div {
     text-align: center;
     color: red;
 }
+@media only screen and (min-width: 1024px) {
+    .button-sign {
+        display: inline-block;
+    }
+  }
+
+
   

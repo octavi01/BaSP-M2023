@@ -7,4 +7,6 @@ This week, we worked on applying CSS styles to the HTML code that we created las
 This time, we were adding responsive styles to all of the landing pages (mobile, tablet, and desktop) using a mobile-first design approach. The curiosity this week is that we discovered we can use "display: flex", a property that we were not aware of a few days ago.
 ## Week 05: JavaScript.
 This week, we were working on some JavaScript exercises. This time, they were just for practice and had no correlation with the HTML/Figma/CSS from the last few weeks.
+## Week 06: JavaScript and DOM.
+This time, we created an HTML and CSS document for the Login and Sign-up section in Figma. Afterwards, we implemented all the necessary logic in JavaScript to make this section fully functional.
 ### Author: Octavio Ferreyra.

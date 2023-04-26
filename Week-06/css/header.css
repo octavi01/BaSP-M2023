@@ -100,10 +100,7 @@
     .menu-section > .contact-section > .contact-li li {
         margin-bottom: 60px;
     }
-    .header-div {
-        justify-content: space-between;
-    }
-    #little-button {
-        display: none;
+    .button-sign {
+        display: inline-block;
     }
 }
