@@ -72,22 +72,42 @@ inputPassword.onblur = function () {
 var loginButton = document.getElementById("login-button");
 
 loginButton.addEventListener("click", function() {
-    if ((inputEmail.value.trim().length !== 0) && (inputPassword.value.trim().length !== 0)) {
-        
-        if ((emailError.textContent  == "") && ( passwordErrorMsg.textContent == "")) {
-            alert("Email: " + inputEmail.value + "\n" + "Password: " + inputPassword.value)
-        } else {
-            if ((emailError.textContent !== "") && ( passwordErrorMsg.textContent !== "")){
-                alert("* Email and Password invalid")
-            }else if (emailError.textContent !== ""){
-                alert("* Email invalid")
-            }else if ( passwordErrorMsg.textContent !== ""){
-                alert("* Password invalid")
-            }
-        }
-    }else{
-        alert("* Complete the fields to enter")
-    }
+  if ((inputEmail.value.trim().length !== 0) && (inputPassword.value.trim().length !== 0)) {
+      
+      if ((emailError.textContent  == "") && ( passwordErrorMsg.textContent == "")) {
+          // We create the query-params to send in the request
+          var queryParams = "?email=" + inputEmail.value + "&password=" + inputPassword.value;
+          
+          // We make the request
+          fetch("https://api-rest-server.vercel.app/login" + queryParams)
+          .then(response => {
+              if (response.ok) {
+                  return response.json();
+              } else {
+                  throw new Error('Request failed');
+              }
+          })
+          .then(data => {
+              // We show the success message and the information obtained in the response
+              alert("Request successful\n" + JSON.stringify(data));
+          })
+          .catch(error => {
+              // We show the error message and the information obtained in the response
+              alert("There was a mistake\n" + error.message);
+          });
+
+      } else {
+          if ((emailError.textContent !== "") && ( passwordErrorMsg.textContent !== "")){
+              alert("* Email and Password invalid")
+          }else if (emailError.textContent !== ""){
+              alert("* Email invalid")
+          }else if ( passwordErrorMsg.textContent !== ""){
+              alert("* Password invalid")
+          }
+      }
+  }else{
+      alert("* Complete the fields to enter")
+  }
 });
 
 
