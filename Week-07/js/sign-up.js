@@ -24,6 +24,22 @@ var inputRepeatPassword = document.getElementById("input-repeat-password");
 var repeatPasswordError = document.createElement("div");
 var repeatPassword = inputRepeatPassword.value;
 
+ // Fill form with LocalStorage data if available
+ if (localStorage.getItem("signupData")) {
+  var savedData = JSON.parse(localStorage.getItem("signupData"));
+  inputName.value = savedData.name;
+  inputLastName.value = savedData.lastName;
+  inputId.value = savedData.dni;
+  inputBirthdate.value = savedData.dob;
+  inputPhone.value = savedData.phone;
+  inputAddress.value = savedData.address;
+  inputLocation.value = savedData.city;
+  inputPostcode.value = savedData.zip;
+  inputEmail.value = savedData.email;
+  inputPassword.value = savedData.password;
+  inputRepeatPassword.value = savedData.password;
+}
+
 // validate name
 
 inputName.addEventListener("blur", function() {
@@ -444,7 +460,7 @@ function validateEmail(email) {
             (passwordError.textContent  == '') && 
             (repeatPasswordError.textContent  == '') ){
 
-            alert('Name: ' + inputName.value + '\n' + 
+             /* alert('Name: ' + inputName.value + '\n' + 
                   'Last name: ' + inputLastName.value + '\n' + 
                   'Dni: ' + inputId.value + '\n' + 
                   'Birth date: ' + inputBirthdate.value + '\n' + 
@@ -454,48 +470,84 @@ function validateEmail(email) {
                   'Postal code: ' + inputPostcode.value + '\n' + 
                   'Email: ' + inputEmail.value + '\n' + 
                   'Password: ' + inputPassword.value + '\n' + 
-                  'Password repeat: ' + inputRepeatPassword.value);
+                  'Password repeat: ' + inputRepeatPassword.value);*/
+            // Build URL with form data
+    var url = "https://api-rest-server.vercel.app/signup" +
+    "?name=" + inputName.value +
+    "&lastName=" + inputLastName.value +
+    "&dni=" + inputId.value +
+    "&dob=" + inputBirthdate.value +
+    "&phone=" + inputPhone.value +
+    "&address=" + inputAddress.value +
+    "&city=" + inputLocation.value +
+    "&zip=" + inputPostcode.value +
+    "&email=" + inputEmail.value +
+    "&password=" + inputPassword.value;
 
-        } else {
-          var errorMsg = '';
-          if (nameError.textContent !== ''){
-            errorMsg += "Name: invalid name. Must contain only letters and be at least 3 characters long.\n";
-          }
-          if (lastNameError.textContent !== ''){
-            errorMsg += "Last Name: invalid last name. Must contain only letters and be at least 3 characters long.\n";
-          }
-          if (idError.textContent !== ''){
-            errorMsg += "ID: Invalid ID. Must contain only numbers and be at least 8 digits long.\n";
-          }
-          if (birthdateError.textContent !== ''){
-            errorMsg += "Birthdate: Invalid birthdate. Must have the format dd/mm/yyyy and be a valid date.\n";
-          }
-          if (phoneError.textContent !== ''){
-            errorMsg += 
-            "Phone: Invalid phone number. Must contain only numbers, exactly 10 digits long, and without area code or country code.\n";
-          }
-          if (addressError.textContent !== ''){
-            errorMsg += "Address: Invalid address. Must contain at least 5 characters, including letters, numbers, and spaces.\n";
-          }
-          if (postcodeError.textContent !== ''){
-            errorMsg += "Location: Invalid location. Must contain at least 3 alphanumeric characters.\n";
-          }
-            if (emailError.textContent !== ''){
-                errorMsg += "E-Mail: Invalid E-Mail. Must contain a valid format. Example@gmail.com"; + '\n';
-            }
-            if (passwordError.textContent !== ''){
-                errorMsg += 
-                "Password: Invalid Password. You need at least 5 letters (one uppercase, one lowercase, and one number)";  + '\n';
-            }
-            if (repeatPasswordError.textContent !== ''){
-                errorMsg +=" Repeat Password: Passwords do not match"; + '\n';
-            }
-            alert(errorMsg);
+    // Send HTTP request with Fetch
+    fetch(url)
+    .then(function(response) {
+            return response.json();
+    })
+    .then(function(data) {
+        // Show alert with success message and response data
+        if (data.success == false) {
+          throw data.msg
         }
-    }else{
-        alert('* Complete the fields to enter')
-    }
-});
+        console.log(data.msg);
+         alert("Sign up successful. " + JSON.stringify(data.msg));
+        // Store form data in LocalStorage
+         localStorage.setItem("signupData", JSON.stringify(data.data));
+
+    })
+    .catch(function(error) {
+        // Show alert with error message
+        alert("Sign up error. " + error);
+    });
+
+
+            } else {
+              var errorMsg = '';
+              if (nameError.textContent !== ''){
+                errorMsg += "Name: invalid name. Must contain only letters and be at least 3 characters long.\n";
+              }
+              if (lastNameError.textContent !== ''){
+                errorMsg += "Last Name: invalid last name. Must contain only letters and be at least 3 characters long.\n";
+              }
+              if (idError.textContent !== ''){
+                errorMsg += "ID: Invalid ID. Must contain only numbers and be at least 8 digits long.\n";
+              }
+              if (birthdateError.textContent !== ''){
+                errorMsg += "Birthdate: Invalid birthdate. Must have the format dd/mm/yyyy and be a valid date.\n";
+              }
+              if (phoneError.textContent !== ''){
+                errorMsg += 
+                "Phone: Invalid phone number. Must contain only numbers, exactly 10 digits long, and without area code or country code.\n";
+              }
+              if (addressError.textContent !== ''){
+                errorMsg += "Address: Invalid address. Must contain at least 5 characters, including letters, numbers, and spaces.\n";
+              }
+              if (postcodeError.textContent !== ''){
+                errorMsg += "Location: Invalid location. Must contain at least 3 alphanumeric characters.\n";
+              }
+                if (emailError.textContent !== ''){
+                    errorMsg += "E-Mail: Invalid E-Mail. Must contain a valid format. Example@gmail.com"; + '\n';
+                }
+                if (passwordError.textContent !== ''){
+                    errorMsg += 
+                    "Password: Invalid Password. You need at least 5 letters (one uppercase, one lowercase, and one number)";  + '\n';
+                }
+                if (repeatPasswordError.textContent !== ''){
+                    errorMsg +=" Repeat Password: Passwords do not match"; + '\n';
+                }
+                alert(errorMsg);
+            }
+        }else{
+            alert('* Complete the fields to enter')
+        }
+    });
+
+
 
 
 
