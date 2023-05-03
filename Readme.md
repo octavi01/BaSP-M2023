@@ -9,4 +9,6 @@ This time, we were adding responsive styles to all of the landing pages (mobile,
 This week, we were working on some JavaScript exercises. This time, they were just for practice and had no correlation with the HTML/Figma/CSS from the last few weeks.
 ## Week 06: JavaScript and DOM.
 This time, we created an HTML and CSS document for the Login and Sign-up section in Figma. Afterwards, we implemented all the necessary logic in JavaScript to make this section fully functional.
+## Week 07: JavaScript Async y Storage
+This week we worked on making the Login and Sign Up sections functional by creating JavaScript logic to validate certain data from the server. Starting this week, we also worked with APIs, so much of what we did revolved around that. Additionally, we saved the Sign Up form data in local storage.
 ### Author: Octavio Ferreyra.
